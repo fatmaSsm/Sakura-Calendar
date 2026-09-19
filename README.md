@@ -1,6 +1,6 @@
 # Sakura Calendar 🌸
 
-A calm calendar and personal planner with soft Sakura-inspired Dusk and Night themes.
+A calm and cozy personal calendar & daily planner with Sakura-inspired Dusk and Night themes.
 
 <p align="center">
   <img src="screenshots/sakura-calendar.gif" width="900">
