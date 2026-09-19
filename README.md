@@ -32,6 +32,24 @@ Sakura Calendar does not send your calendar data to a server.
 
 For important plans, use **Settings → Export backup** occasionally. Clearing browser site data may remove your locally stored calendar data.
 
+## Browser storage
+
+Calendar data is stored separately for each browser and device.
+
+```text
+Chrome
+   └── its own localStorage
+
+Firefox
+   └── its own localStorage
+
+Another device
+   └── its own localStorage
+```
+
+This means your calendar data does not automatically sync between browsers or devices.
+
+To move your calendar data, use **Settings → Export backup** and **Import backup**.
 
 ## Getting Started
 
