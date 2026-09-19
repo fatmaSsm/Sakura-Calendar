@@ -9,18 +9,19 @@ A calm and cozy personal calendar & daily planner with Sakura-inspired Dusk and 
 ## Features
 
 - Responsive month and year calendar views
-- Multi-year navigation and a live date/clock
-- Daily notes and time blocks
+- Multi-year navigation with a live date and clock
+- Daily planning with notes and time blocks
 - Colored date markers
-- Freehand drawing, eraser, brush colors and sizes
+- Freehand drawing with customizable brush colors and sizes
+- Eraser tool for calendar drawings
 - Draggable and removable lifestyle stickers
-- Quick Notes with auto-save
+- Auto-saved Quick Notes
 - Daily motivational quotes and Daily Care reminders
 - Focus mode
-- Dusk / Night backgrounds and falling sakura petals
+- Dusk and Night themes with falling sakura petals
 - Persistent browser storage with `localStorage`
 - JSON backup export and import
-- No framework, build process, account, backend, CDN, or database required
+- No frameworks, build tools, accounts, backend, CDN, or database required
 
 ## 🔒 Privacy & Data Storage
 
@@ -31,57 +32,40 @@ Sakura Calendar
       ↓
 Browser localStorage
       ↓
-Stored on your device
+Your device
 ```
 
-There is no account, backend, or database. Sakura Calendar does not send your calendar data to a server, and the repository contains no personal calendar data.
+Your notes, plans, drawings, markers, stickers, and settings are not sent to a server or shared with other visitors.
 
-Each browser and device has its own separate storage:
+Storage is specific to each browser, device, and site origin. This means your calendar does not automatically sync between browsers or devices.
 
-```text
-Chrome
-   └── its own localStorage
+To transfer or protect your data, use **Settings → Export backup** and **Import backup**.
 
-Firefox
-   └── its own localStorage
-
-Another device
-   └── its own localStorage
-```
-
-This means your notes, plans, drawings, markers, stickers, and settings are not shared with other visitors and do not automatically sync between browsers or devices.
-
-To move or protect your calendar data, use **Settings → Export backup** and **Import backup**.
-
-> **Important:** Clearing your browser's site data may remove your locally stored calendar data. Export a backup occasionally if your plans are important.
+> **Important:** Clearing your browser's site data may remove your calendar data. Export a backup periodically if you want to keep important plans safe.
 
 ## Getting Started
 
-Sakura Calendar runs entirely in your browser — no installation or backend is required.
+Sakura Calendar runs entirely in your browser with no installation required.
 
 ### 🌸 Option 1 — Open directly
-
-The easiest way to use Sakura Calendar:
 
 1. Download or clone the repository.
 2. Open the project folder.
 3. Double-click `index.html`.
 
-That's it! Sakura Calendar will open directly in your browser.
+Sakura Calendar will open directly in your browser.
 
 ### 🖥️ Option 2 — Run with a local server
 
-For a stable local development environment, you can run Sakura Calendar using Python:
+For local development, start a simple HTTP server:
 
 ```bash
 python -m http.server 8080
 ```
 
-Then open:
+Then open `http://localhost:8080` in your browser.
 
-`http://localhost:8080`
-
-You can also use the VS Code **Live Server** extension if you prefer.
+Alternatively, you can use the VS Code **Live Server** extension.
 
 ### 🌐 Option 3 — GitHub Pages
 
@@ -89,25 +73,25 @@ Try Sakura Calendar directly in your browser:
 
 **[Open Sakura Calendar 🌸](https://fatmassm.github.io/Sakura-Calendar/)**
 
-> Your calendar data is stored locally in your browser using `localStorage`. Different URLs or browser profiles have separate storage, so data created by opening `index.html` directly will not automatically appear on the GitHub Pages version.
+> Data is stored separately for each site origin. Calendar data created by opening `index.html` directly will not automatically appear in the GitHub Pages version.
 
-## Project structure
+## Project Structure
 
 ```text
-Sakura_Calendar/
+Sakura-Calendar/
 ├─ index.html
 ├─ styles.css
 ├─ app.js
 ├─ README.md
 ├─ TESTING.md
-└─ assets/
-   ├─ bg-dusk.webp
-   ├─ bg-night.webp
-   ├─ favicon.png
-   └─ favicon_1.png
+├─ assets/
+│  ├─ bg-dusk.webp
+│  ├─ bg-night.webp
+│  └─ favicon.png
 └─ screenshots/
    └─ sakura-calendar.gif
 ```
+
 ---
 
 ## Tech Stack
@@ -117,11 +101,11 @@ Sakura_Calendar/
 - Vanilla JavaScript
 - Browser `localStorage`
 
---- 
+---
 
-## 📬 Contact 
+## 📬 Contact
 
-Fatma Susam 
+Fatma Susam
 
 [![GitHub](https://img.shields.io/badge/GitHub-fatmaSsm-181717?style=for-the-badge&logo=github)](https://github.com/fatmaSsm)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/fatma-susam/)
