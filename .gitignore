@@ -1,0 +1,8 @@
+# Sakura Calendar personal backup exports
+sakura-calendar-backup*.json
+*calendar-backup*.json
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/

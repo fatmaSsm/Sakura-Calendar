@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#171125" />
+  <meta name="description" content="A calm, local-first personal calendar and planner." />
+  <title>Sakura Calendar</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="dusk">
+  <div class="scene" aria-hidden="true"></div>
+  <div class="scene-shade" aria-hidden="true"></div>
+  <div id="petalLayer" class="petal-layer" aria-hidden="true"></div>
+
+  <div id="app" class="app-layout">
+    <aside id="sidebar" class="sidebar glass">
+      <div class="sidebar-top">
+        <button id="sidebarToggle" class="icon-btn menu-btn" type="button" aria-label="Collapse sidebar" title="Collapse sidebar">
+          <svg viewBox="0 0 24 24"><path d="M5 7h14M5 12h14M5 17h14"/></svg>
+        </button>
+        <div class="brand">
+          <span class="brand-flower">🌸</span>
+          <div class="brand-copy"><strong>Sakura<br>Calendar</strong><small>Plan a kinder you</small></div>
+        </div>
+      </div>
+
+      <nav class="side-nav" aria-label="Calendar navigation">
+        <button class="nav-item active" data-action="calendar" type="button"><span class="nav-icon">▣</span><span>Calendar</span></button>
+        <button class="nav-item" data-action="today" type="button"><span class="nav-icon">☀</span><span>Today</span></button>
+        <button class="nav-item" data-action="planner" type="button"><span class="nav-icon">☷</span><span>Planner</span></button>
+        <button class="nav-item" data-action="stickers" type="button"><span class="nav-icon">✿</span><span>Stickers</span></button>
+        <button class="nav-item" data-action="notes" type="button"><span class="nav-icon">▤</span><span>Notes</span></button>
+        <button class="nav-item" data-action="focus" type="button"><span class="nav-icon">◰</span><span>Focus</span></button>
+        <button class="nav-item" data-action="settings" type="button"><span class="nav-icon">⚙</span><span>Settings</span></button>
+      </nav>
+
+      <div class="sidebar-quote">
+        <span>“</span><p id="sidebarQuote">A quiet day can still move your life forward.</p>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="hero-row">
+        <div class="greeting">
+          <span class="leaf">❧</span>
+          <div><h1 id="greetingText">Good evening</h1><p>Small steps, big changes.</p></div>
+        </div>
+
+        <div class="hero-actions">
+          <div class="clock-card glass">
+            <strong id="liveTime">00:00</strong>
+            <span id="liveDate">Friday, 18 September 2026</span>
+            <span id="clockMoon" class="clock-moon">☾</span>
+          </div>
+          <div class="theme-switch glass" role="group" aria-label="Atmosphere">
+            <button class="theme-option active" data-theme-option="dusk" type="button">☀ Dusk</button>
+            <button class="theme-option" data-theme-option="night" type="button">Night</button>
+          </div>
+          <button id="focusButton" class="icon-btn glass" type="button" title="Focus mode" aria-label="Focus mode">
+            <svg viewBox="0 0 24 24"><path d="M8 4H4v4M16 4h4v4M8 20H4v-4M16 20h4v-4"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <section id="plannerFrame" class="planner-frame glass">
+        <section class="calendar-section">
+          <div class="calendar-toolbar">
+            <div class="nav-cluster">
+              <button id="focusExitButton" class="focus-exit-btn" type="button" aria-label="Exit focus mode">✨ Back </button>
+              <button id="prevButton" class="square-btn" type="button" aria-label="Previous"><span>‹</span></button>
+              <button id="todayButton" class="soft-btn" type="button">Today</button>
+              <button id="nextButton" class="square-btn" type="button" aria-label="Next"><span>›</span></button>
+            </div>
+
+            <div class="title-picker-wrap">
+              <button id="calendarTitleButton" class="calendar-title-button" type="button" aria-haspopup="true">
+                <span id="calendarTitle">September 2026</span><span class="title-chevron">⌄</span>
+              </button>
+              <div id="datePickerPopover" class="date-picker-popover hidden">
+                <div class="picker-columns">
+                  <div><span class="picker-label">Month</span><div id="monthPickerList" class="picker-list"></div></div>
+                  <div><span class="picker-label">Year</span><div id="yearPickerList" class="picker-list year-list"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="view-tabs" role="tablist">
+              <button class="view-tab active" data-view="month" type="button">Month</button>
+              <button class="view-tab" data-view="year" type="button">Year</button>
+            </div>
+          </div>
+
+          <div id="focusToolDock" class="focus-tool-dock">
+            <div class="dock-tools">
+              <button class="dock-tool active" data-tool="plan" type="button">✎ <span>Plan</span></button>
+              <button class="dock-tool" data-tool="marker" type="button">◯ <span>Mark</span></button>
+              <button class="dock-tool" data-tool="pen" type="button">〰 <span>Draw</span></button>
+              <button class="dock-tool" data-tool="eraser" type="button">◇ <span>Erase</span></button>
+              <button class="dock-tool" data-tool="sticker" type="button">✿ <span>Sticker</span></button>
+            </div>
+            <div class="dock-controls">
+              <div id="focusSwatches" class="swatch-row"></div>
+              <label>Size <input id="focusBrushSize" type="range" min="2" max="24" value="5"><span id="focusBrushValue">5</span></label>
+              <div class="dock-mini-actions"><button id="focusClearButton" class="tiny-btn" type="button">Clear</button><button id="focusCloseButton" class="tiny-btn close-focus" type="button">Close focus</button></div>
+              <div id="focusStickerGrid" class="focus-stickers"></div>
+            </div>
+          </div>
+
+          <div id="monthView" class="month-view">
+            <div class="weekday-row"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+            <div id="monthStage" class="stage month-stage">
+              <div id="calendarGrid" class="calendar-grid"></div>
+              <canvas id="drawingCanvas"></canvas>
+              <div id="floatingStickers" class="floating-stickers"></div>
+            </div>
+          </div>
+
+          <div id="yearStage" class="stage year-stage hidden">
+            <div id="yearView" class="year-view"></div>
+            <canvas id="yearDrawingCanvas"></canvas>
+            <div id="yearFloatingStickers" class="floating-stickers"></div>
+          </div>
+        </section>
+
+        <aside id="dayPanel" class="day-panel">
+          <div class="day-panel-head">
+            <div><span id="weekLabel" class="eyebrow">WEEK 38</span><h2 id="selectedDateTitle">Friday, 18 September 2026</h2></div>
+            <button id="collapseDayPanel" class="panel-close" type="button" title="Hide planner" aria-label="Hide planner">×</button>
+          </div>
+          <div class="day-quote"><span>❧</span><p id="selectedDayQuote">Do something today that your future self will thank you for.</p></div>
+
+          <div class="day-tabs" role="tablist">
+            <button class="day-tab active" data-tool="plan" type="button">Plan</button>
+            <button class="day-tab" data-tool="marker" type="button">Mark</button>
+            <button class="day-tab" data-tool="pen" type="button">Draw</button>
+            <button class="day-tab" data-tool="sticker" type="button">Stickers</button>
+          </div>
+
+          <div id="planToolPanel" class="tool-panel active-panel">
+            <label class="panel-label" for="dayNote">Notes</label>
+            <textarea id="dayNote" class="day-notes" placeholder="Write your plan, reflection, reminder or little memory..."></textarea>
+
+            <label class="panel-label">Schedule</label>
+            <div id="scheduleList" class="schedule-list"></div>
+            <button id="addScheduleButton" class="add-time-btn" type="button">＋ Add time block</button>
+
+            <div class="day-actions">
+              <button id="clearDayButton" class="clear-day-btn" type="button">♙ Clear this day</button>
+              <button id="saveDayButton" class="save-day-btn" type="button">Save</button>
+            </div>
+          </div>
+
+          <div id="markToolPanel" class="tool-panel">
+            <button class="tool-back-btn" data-back-plan type="button"> 🪶 Back to plan</button>
+            <p class="panel-help">Pick a color, then click a date to add or change its ring.</p>
+            <div class="panel-swatches" id="panelSwatches"></div>
+            <button id="removeMarkButton" class="ghost-wide" type="button">Remove mark from selected day</button>
+          </div>
+
+          <div id="drawToolPanel" class="tool-panel">
+            <button class="tool-back-btn" data-back-plan type="button"> 🪶 Back to plan</button>
+            <p class="panel-help">Draw directly on the calendar. Eraser only affects your freehand drawing.</p>
+            <div class="draw-controls">
+              <div class="panel-swatches" id="drawSwatches"></div>
+              <label>Brush size <input id="brushSize" type="range" min="2" max="24" value="5"><span id="brushSizeValue">5 px</span></label>
+              <div class="draw-buttons"><button id="penButton" class="mini-action active" type="button">Draw</button><button id="eraserButton" class="mini-action" type="button">Erase</button></div>
+              <button id="clearDrawingButton" class="ghost-wide" type="button">Clear visible drawing</button>
+            </div>
+          </div>
+
+          <div id="stickerToolPanel" class="tool-panel">
+            <button class="tool-back-btn" data-back-plan type="button"> 🪶 Back to plan</button>
+            <p class="panel-help">Choose a sticker, then click the calendar. Drag placed stickers to move them. Hover or select one to remove it.</p>
+            <div id="stickerGrid" class="sticker-grid"></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="bottom-cards">
+        <article class="note-card glass"><span class="note-card-icon">♡</span><div><small>Daily Care</small><p id="dailyAdvice">Drink some water and give your eyes a short screen break.</p></div></article>
+        <article id="quickNotesCard" class="quick-card glass"><div class="quick-card-title"><span>✎</span><small>Quick Notes</small></div><textarea id="quickNotes" placeholder="A loose thought, shopping list, reminder..."></textarea></article>
+      </section>
+    </main>
+  </div>
+
+  <div id="settingsBackdrop" class="modal-backdrop hidden">
+    <section class="settings-modal glass" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <button id="closeSettings" class="panel-close settings-close" type="button">×</button>
+      <span class="eyebrow">PREFERENCES</span><h2 id="settingsTitle">Calendar settings</h2>
+      <div class="setting-list">
+        <label class="setting-row"><span><strong>Falling petals</strong><small>Ambient sakura petals in the background</small></span><input id="petalsToggle" type="checkbox" checked></label>
+        <label class="setting-row"><span><strong>24-hour clock</strong><small>Use 19:30 instead of 7:30 PM</small></span><input id="clockToggle" type="checkbox" checked></label>
+        <label class="setting-row"><span><strong>Weekend tint</strong><small>Use a soft warm tint on weekends</small></span><input id="weekendToggle" type="checkbox" checked></label>
+      </div>
+      <div class="data-actions">
+        <button id="exportButton" class="soft-btn" type="button">Export backup</button>
+        <label class="soft-btn file-label">Import backup<input id="importInput" type="file" accept=".json,application/json"></label>
+        <button id="resetButton" class="danger-btn" type="button">Reset local data</button>
+      </div>
+    </section>
+  </div>
+
+  <template id="scheduleItemTemplate">
+    <div class="schedule-item">
+      <div class="time-picker-wrap">
+        <button class="time-button" type="button">09:00</button>
+        <div class="time-popover hidden"><div class="time-column hour-column"></div><span>:</span><div class="time-column minute-column"></div></div>
+      </div>
+      <input class="schedule-text" type="text" placeholder="Study, class, coding, coffee...">
+      <button class="remove-schedule" type="button" aria-label="Remove">×</button>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
