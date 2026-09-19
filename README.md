@@ -22,19 +22,21 @@ A calm and cozy personal calendar & daily planner with Sakura-inspired Dusk and 
 - JSON backup export and import
 - No framework, build process, account, backend, CDN, or database required
 
-## Privacy
+## 🔒 Privacy & Data Storage
 
 Sakura Calendar stores your calendar data locally in your browser using `localStorage`.
 
-Each visitor has their own private calendar data. Notes, plans, drawings, markers, stickers, and settings are not shared with other users and are not stored in the GitHub repository.
+```text
+Sakura Calendar
+      ↓
+Browser localStorage
+      ↓
+Stored on your device
+```
 
-Sakura Calendar does not send your calendar data to a server.
+There is no account, backend, or database. Sakura Calendar does not send your calendar data to a server, and the repository contains no personal calendar data.
 
-For important plans, use **Settings → Export backup** occasionally. Clearing browser site data may remove your locally stored calendar data.
-
-## Browser storage
-
-Calendar data is stored separately for each browser and device.
+Each browser and device has its own separate storage:
 
 ```text
 Chrome
@@ -47,9 +49,11 @@ Another device
    └── its own localStorage
 ```
 
-This means your calendar data does not automatically sync between browsers or devices.
+This means your notes, plans, drawings, markers, stickers, and settings are not shared with other visitors and do not automatically sync between browsers or devices.
 
-To move your calendar data, use **Settings → Export backup** and **Import backup**.
+To move or protect your calendar data, use **Settings → Export backup** and **Import backup**.
+
+> **Important:** Clearing your browser's site data may remove your locally stored calendar data. Export a backup occasionally if your plans are important.
 
 ## Getting Started
 
