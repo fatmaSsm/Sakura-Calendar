@@ -24,11 +24,14 @@ A calm and cozy personal calendar & daily planner with Sakura-inspired Dusk and 
 
 ## Privacy
 
-Sakura Calendar is local-first. Notes, plans, marks, drawings, stickers, settings, and other calendar data are stored in your browser using `localStorage`.
+Sakura Calendar stores your calendar data locally in your browser using `localStorage`.
 
-The repository contains no personal calendar data. Sakura Calendar does not send your calendar data to a server.
+Each visitor has their own private calendar data. Notes, plans, drawings, markers, stickers, and settings are not shared with other users and are not stored in the GitHub repository.
 
-For important plans, use **Settings → Export backup** occasionally. Clearing browser site data can remove local storage.
+Sakura Calendar does not send your calendar data to a server.
+
+For important plans, use **Settings → Export backup** occasionally. Clearing browser site data may remove your locally stored calendar data.
+
 
 ## Getting Started
 
