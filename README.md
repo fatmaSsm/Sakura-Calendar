@@ -95,3 +95,14 @@ This is a static project, so it can be deployed directly with GitHub Pages.
 ## Backup files
 
 Exported personal backup files should stay private and should not be committed to the repository.
+
+---
+
+## 📬 Contact 
+
+Fatma Susam 
+
+[![GitHub](https://img.shields.io/badge/GitHub-fatmaSsm-181717?style=for-the-badge&logo=github)](https://github.com/fatmaSsm)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/fatma-susam/)
+
+---
