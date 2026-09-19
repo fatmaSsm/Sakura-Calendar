@@ -30,7 +30,7 @@ The repository contains no personal calendar data. Nothing is uploaded by the ap
 
 For important plans, use **Settings → Export backup** occasionally. Clearing browser site data can remove local storage.
 
-## 🚀 Getting Started
+## Getting Started
 
 Sakura Calendar runs entirely in your browser — no installation or backend is required.
 
