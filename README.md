@@ -2,6 +2,10 @@
 
 A calm, local-first calendar and personal planner with soft Sakura-inspired Dusk and Night themes.
 
+<p align="center">
+  <img src="screenshots/sakura-calendar.gif" width="900">
+</p>
+
 ## Features
 
 - Responsive month and year calendar views
