@@ -85,6 +85,15 @@ Sakura_Calendar/
 ```
 ---
 
+## Tech Stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Browser `localStorage`
+
+--- 
+
 ## 📬 Contact 
 
 Fatma Susam 
