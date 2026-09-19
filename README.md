@@ -62,7 +62,7 @@ You can also use the VS Code **Live Server** extension if you prefer.
 
 Sakura Calendar can also be used directly from your browser through GitHub Pages:
 
-**[Open Sakura Calendar 🌸](YOUR_GITHUB_PAGES_URL)**
+**[Open Sakura Calendar 🌸]([YOUR_GITHUB_PAGES_URL](https://fatmassm.github.io/Sakura-Calendar/))**
 
 > Your calendar data is stored locally in your browser using `localStorage`. Different URLs or browser profiles have separate storage, so data created by opening `index.html` directly will not automatically appear on the GitHub Pages version.
 
