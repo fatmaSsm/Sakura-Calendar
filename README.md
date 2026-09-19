@@ -81,21 +81,6 @@ Sakura_Calendar/
    ├─ favicon.png
    └─ favicon_1.png
 ```
-
-## GitHub Pages
-
-This is a static project, so it can be deployed directly with GitHub Pages.
-
-1. Push the project to a GitHub repository.
-2. Open **Settings → Pages** in the repository.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the `main` branch and `/ (root)` folder.
-5. Save and wait for the deployment to finish.
-
-## Backup files
-
-Exported personal backup files should stay private and should not be committed to the repository.
-
 ---
 
 ## 📬 Contact 
