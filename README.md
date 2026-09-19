@@ -80,6 +80,8 @@ Sakura_Calendar/
    ├─ bg-night.webp
    ├─ favicon.png
    └─ favicon_1.png
+└─ screenshots/
+   └─ sakura-calendar.gif
 ```
 ---
 
