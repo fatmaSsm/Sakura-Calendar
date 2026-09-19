@@ -6,6 +6,8 @@ A calm and cozy personal calendar & daily planner with Sakura-inspired Dusk and 
   <img src="screenshots/sakura-calendar.gif" width="900">
 </p>
 
+---
+
 ## Features
 
 - Responsive month and year calendar views
@@ -22,6 +24,8 @@ A calm and cozy personal calendar & daily planner with Sakura-inspired Dusk and 
 - Persistent browser storage with `localStorage`
 - JSON backup export and import
 - No frameworks, build tools, accounts, backend, CDN, or database required
+
+---
 
 ## 🔒 Privacy & Data Storage
 
@@ -42,6 +46,8 @@ Storage is specific to each browser, device, and site origin. This means your ca
 To transfer or protect your data, use **Settings → Export backup** and **Import backup**.
 
 > **Important:** Clearing your browser's site data may remove your calendar data. Export a backup periodically if you want to keep important plans safe.
+
+---
 
 ## Getting Started
 
@@ -74,6 +80,8 @@ Try Sakura Calendar directly in your browser:
 **[Open Sakura Calendar 🌸](https://fatmassm.github.io/Sakura-Calendar/)**
 
 > Data is stored separately for each site origin. Calendar data created by opening `index.html` directly will not automatically appear in the GitHub Pages version.
+
+---
 
 ## Project Structure
 
