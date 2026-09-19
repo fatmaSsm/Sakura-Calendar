@@ -51,8 +51,6 @@ To transfer or protect your data, use **Settings → Export backup** and **Impor
 
 ## Getting Started
 
-Sakura Calendar runs entirely in your browser with no installation required.
-
 ### 🌸 Option 1 — Open directly
 
 1. Download or clone the repository.
