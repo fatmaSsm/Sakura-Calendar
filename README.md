@@ -18,7 +18,7 @@ A calm and cozy personal calendar & daily planner with Sakura-inspired Dusk and 
 - Daily motivational quotes and Daily Care reminders
 - Focus mode
 - Dusk / Night backgrounds and falling sakura petals
-- Local browser persistence
+- Persistent browser storage with `localStorage`
 - JSON backup export and import
 - No framework, build process, account, backend, CDN, or database required
 
@@ -26,7 +26,7 @@ A calm and cozy personal calendar & daily planner with Sakura-inspired Dusk and 
 
 Sakura Calendar is local-first. Notes, plans, marks, drawings, stickers, settings, and other calendar data are stored in your browser using `localStorage`.
 
-The repository contains no personal calendar data. Nothing is uploaded by the app.
+The repository contains no personal calendar data. Sakura Calendar does not send your calendar data to a server.
 
 For important plans, use **Settings → Export backup** occasionally. Clearing browser site data can remove local storage.
 
@@ -60,7 +60,7 @@ You can also use the VS Code **Live Server** extension if you prefer.
 
 ### 🌐 Option 3 — GitHub Pages
 
-Sakura Calendar can also be used directly from your browser through GitHub Pages:
+Try Sakura Calendar directly in your browser:
 
 **[Open Sakura Calendar 🌸](https://fatmassm.github.io/Sakura-Calendar/)**
 
