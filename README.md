@@ -30,17 +30,41 @@ The repository contains no personal calendar data. Nothing is uploaded by the ap
 
 For important plans, use **Settings → Export backup** occasionally. Clearing browser site data can remove local storage.
 
-## Run locally
+## 🚀 Getting Started
 
-A local server is recommended so the browser uses a stable storage origin.
+Sakura Calendar runs entirely in your browser — no installation or backend is required.
+
+### 🌸 Option 1 — Open directly
+
+The easiest way to use Sakura Calendar:
+
+1. Download or clone the repository.
+2. Open the project folder.
+3. Double-click `index.html`.
+
+That's it! Sakura Calendar will open directly in your browser.
+
+### 🖥️ Option 2 — Run with a local server
+
+For a stable local development environment, you can run Sakura Calendar using Python:
 
 ```bash
 python -m http.server 8080
 ```
 
-Then open `http://localhost:8080` in your browser.
+Then open:
 
-You can also use the VS Code **Live Server** extension.
+`http://localhost:8080`
+
+You can also use the VS Code **Live Server** extension if you prefer.
+
+### 🌐 Option 3 — GitHub Pages
+
+Sakura Calendar can also be used directly from your browser through GitHub Pages:
+
+**[Open Sakura Calendar 🌸](YOUR_GITHUB_PAGES_URL)**
+
+> Your calendar data is stored locally in your browser using `localStorage`. Different URLs or browser profiles have separate storage, so data created by opening `index.html` directly will not automatically appear on the GitHub Pages version.
 
 ## Project structure
 
