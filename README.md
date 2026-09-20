@@ -81,7 +81,7 @@ Try Sakura Calendar directly in your browser:
 
 ---
 
-## Project Structure
+## Project Structure 
 
 ```text
 Sakura-Calendar/
